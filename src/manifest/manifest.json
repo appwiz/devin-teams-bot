@@ -1,0 +1,65 @@
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.11/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.11",
+  "version": "1.0.0",
+  "id": "{{BOT_ID}}",
+  "packageName": "com.microsoft.teams.devinbot",
+  "developer": {
+    "name": "Devin Bot Developer",
+    "websiteUrl": "https://github.com/appwiz/devin-teams-bot",
+    "privacyUrl": "https://github.com/appwiz/devin-teams-bot",
+    "termsOfUseUrl": "https://github.com/appwiz/devin-teams-bot"
+  },
+  "icons": {
+    "color": "color.png",
+    "outline": "outline.png"
+  },
+  "name": {
+    "short": "Devin Bot",
+    "full": "Devin Teams Bot"
+  },
+  "description": {
+    "short": "A bot that integrates with the Devin API",
+    "full": "A Microsoft Teams chat bot that integrates with the Devin API to enable users to interact with Devin through Teams messages."
+  },
+  "accentColor": "#FFFFFF",
+  "bots": [
+    {
+      "botId": "{{BOT_ID}}",
+      "scopes": [
+        "personal",
+        "team",
+        "groupchat"
+      ],
+      "supportsFiles": false,
+      "isNotificationOnly": false,
+      "commandLists": [
+        {
+          "scopes": [
+            "personal",
+            "team",
+            "groupchat"
+          ],
+          "commands": [
+            {
+              "title": "help",
+              "description": "Shows help information"
+            },
+            {
+              "title": "new",
+              "description": "Start a new conversation with Devin"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "permissions": [
+    "identity",
+    "messageTeamMembers"
+  ],
+  "validDomains": [
+    "token.botframework.com",
+    "*.ngrok.io"
+  ]
+}
